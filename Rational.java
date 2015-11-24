@@ -107,7 +107,10 @@ public class Rational{
 	    return 0;
 	}
     }
-	
+    
+    public boolean equals(Rational x){
+	return this.compareTo(x) == 0;
+    }
     public static void main(String[] args){
 	Rational george = new Rational();
 	Rational marley = new Rational(17,38);
@@ -136,6 +139,8 @@ public class Rational{
 	System.out.println(bigger.compareTo(smaller));  //1
 	System.out.println(smaller.compareTo(bigger)); //-1
 	System.out.println(bigger.compareTo(bigger)); //0
+	System.out.println(bigger.equals(smaller));
+	System.out.println(bigger.equals(bigger));
 	
     }
 }
