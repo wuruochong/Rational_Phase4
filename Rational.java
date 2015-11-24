@@ -108,14 +108,17 @@ public class Rational{
 	}
     }
     
-    public boolean equals(Rational x){
-	return this.compareTo(x) == 0;
+    public boolean equals(Object x){
+	if(x instanceof Rational)
+	    return this.compareTo((Rational)x) == 0;
+	else return false;
     }
     public static void main(String[] args){
 	Rational george = new Rational();
 	Rational marley = new Rational(17,38);
 	Rational tigger = new Rational(21,69);
 	Rational bigger = new Rational(1,2);
+	Rational larger = new Rational(1,2);
 	Rational smaller = new Rational (1,3);
 	System.out.println(tigger.GCD());
 	System.out.println(tigger.GCD(tigger.numerator,tigger.denominator));
@@ -139,8 +142,11 @@ public class Rational{
 	System.out.println(bigger.compareTo(smaller));  //1
 	System.out.println(smaller.compareTo(bigger)); //-1
 	System.out.println(bigger.compareTo(bigger)); //0
-	System.out.println(bigger.equals(smaller));
-	System.out.println(bigger.equals(bigger));
+	System.out.println(bigger.equals(smaller)); //false
+	System.out.println(bigger.equals(bigger)); //true
+	System.out.println(bigger.equals(larger)); //true
+	String a = new String("hello");
+	System.out.println(bigger.equals(a)); //false
 	
     }
 }
