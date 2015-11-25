@@ -1,7 +1,7 @@
-//Team Rational_RationALIziNG -- Nicholas Ng, Ruochong Wu
+//Team Rational_Irrationality - Gabriel Marks, Ruochong Wu
 //APCS1 pd10
-//HW #33: Do You Even Add, Bro?
-//2015-11-18
+//HW #37: Rational Equality
+//2015-11-24
 
 public class Rational{
 
